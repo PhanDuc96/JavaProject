@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Admin Mentor Management Web</title>
+    <!-- Lưu ý: inmport J Query trước khi import bootstrap -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- ================= Favicon ================== -->
+    <!-- Standard -->
+    <link rel="shortcut icon" href="assets/images/favicon.png">
+    <!-- Retina iPad Touch Icon-->
+    <link rel="apple-touch-icon" sizes="144x144" href="http://placehold.it/144.png/000/fff">
+    <!-- Retina iPhone Touch Icon-->
+    <link rel="apple-touch-icon" sizes="114x114" href="http://placehold.it/114.png/000/fff">
+    <!-- Standard iPad Touch Icon-->
+    <link rel="apple-touch-icon" sizes="72x72" href="http://placehold.it/72.png/000/fff">
+    <!-- Standard iPhone Touch Icon-->
+    <link rel="apple-touch-icon" sizes="57x57" href="http://placehold.it/57.png/000/fff">
+
+    <!-- Styles -->
+    <link href="assets/css/lib/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/lib/themify-icons.css" rel="stylesheet">
+    <link href="assets/css/lib/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/lib/helper.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <script src="/assets/js/auth.js"></script>
+</head>
+
+<body class="bg-primary">
+
+    <div class="unix-login">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="login-content">
+                        <div class="login-logo">
+                            <a href="index.html"><span></span></a>
+                        </div>
+                        <div class="login-form">
+                            <h4>User Sign Up</h4>
+                            <!-- <img style = "margin: 20px;"src="assets/images/[LOGO]VTI ACADEMY-01 (1).png" width="300px"></img> -->
+                            <form>
+                                <div class="form-group">
+                                    <label>Username</label>
+                                    <input type="Username" class="form-control" id="Username" name="Username"
+                                        placeholder="Username" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Password</label>
+                                    <input type="password" class="form-control" id="Password" name="Password"
+                                        placeholder="Password" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="fullName-ip">Full Name</label>
+                                    <input type="text" class="form-control" id="fullName"
+                                        placeholder="Nhập Họ Và Tên">
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-12">
+                                        <label for="birthDay">Birth Day</label>
+                                        <input type="date" class="form-control" id="birthDay" placeholder="Nhập ngày sinh">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputAddress">Address</label>
+                                    <input type="text" class="form-control" id="address" placeholder="Nhập địa chỉ">
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-check form-check-inline">
+                                        <label for="role">Role </label>
+                                        <select id="role" class="form-control">
+                                            <option value="" selected>Choose...</option>
+                                            <option value="ADMIN">ADMIN</option>
+                                            <option value="MENTOR">MENTOR</option>
+                                            <option value="STUDENT">STUDENT</option>
+                                            <option value="TUTOR">TUTOR</option>
+                                        </select>
+                                    </div>
+    
+                                    <div class="form-check form-check-inline">
+                                        <label for="phoneNumber">Phone Number</label>
+                                        <input type="text" class="form-control" id="phoneNumber"
+                                            placeholder="Nhập Số Điện Thoại">
+                                    </div>
+
+                                </div>
+                                
+                                
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="text" class="form-control" id="email"
+                                        placeholder="Nhập Email">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="facebook">Facebook</label>
+                                    <input type="text" class="form-control" id="facebook"
+                                        placeholder="Nhập link Facebook">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="information">Information</label>
+                                    <input type="text" class="form-control" id="information"
+                                        placeholder="Có thể để trống">
+                                </div>
+
+                                </div>
+                                <button type="button" value="Sign Up" class="btn btn-primary btn-flat m-b-30 m-t-30"
+                                    onclick="signUp()">SignUp</button>
+
+                                <div class="register-link m-t-15 text-center">
+                                    <!-- <p>Don't have account ? <a href="#"> Sign Up Here</a></p> -->
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Error Alert -->
+    <div class="alert alert-danger alert-dismissible fade show" id="error-alert"
+        style=" display: none; height: 60px;">
+        <button type="button" class="close" data-dismiss="alert">x</button>
+        <strong>Error!</strong> <span id="content-error-alert"></span>
+    </div>
+</body>
+
+</html>
